@@ -1,18 +1,21 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import PropertyLengthMeasure from '../../../../catalog/properties/property-lenght-measure';
 import PropertyString from '../../../../catalog/properties/property-string';
+import PropertyPrice from '../../../../catalog/properties/property-price';
 
 export default function HoleAttributesEditor({element, onUpdate, attributeFormData, state, ...rest}, {translator}) {
   let name = attributeFormData.has('name') ? attributeFormData.get('name') : element.name;
   let offsetA = attributeFormData.has('offsetA') ? attributeFormData.get('offsetA') : element.offsetA;
   let offsetB = attributeFormData.has('offsetB') ? attributeFormData.get('offsetB') : element.offsetA;
 
+  const unitHolePrice = 30
+
   return <div>
     <PropertyString
       value={name}
       onUpdate={mapped => onUpdate('name', mapped)}
-      configs={{label: 'Nome'}}
+      configs={{label: 'Name'}}
       state={state}
       {...rest}
     />
@@ -27,6 +30,13 @@ export default function HoleAttributesEditor({element, onUpdate, attributeFormDa
       value={offsetB}
       onUpdate={mapped => onUpdate('offsetB', mapped)}
       configs={{label: 'Offset 2', min: 0, max: Infinity, precision: 2}}
+      state={state}
+      {...rest}
+    />
+    <PropertyPrice
+      value={unitHolePrice}
+      onUpdate={mapped => onUpdate('price', mapped)}
+      configs={{label: 'price'}}
       state={state}
       {...rest}
     />

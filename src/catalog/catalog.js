@@ -7,7 +7,8 @@ import {
   PropertyToggle,
   PropertyCheckbox,
   PropertyHidden,
-  PropertyReadOnly
+  PropertyReadOnly,
+  PropertyPrice
 } from './properties/export';
 
 import {UNIT_CENTIMETER} from '../constants';
@@ -29,8 +30,10 @@ export default class Catalog {
       ['toggle', PropertyToggle, PropertyToggle],
       ['checkbox', PropertyCheckbox, PropertyCheckbox],
       ['hidden', PropertyHidden, PropertyHidden],
-      ['read-only', PropertyReadOnly, PropertyReadOnly]
+      ['read-only', PropertyReadOnly, PropertyReadOnly],
     ]);
+
+    this.registerPropertyType('price', PropertyPrice, PropertyPrice)
   }
 
   /** @description Get catalog's element

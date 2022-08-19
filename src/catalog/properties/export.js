@@ -7,6 +7,7 @@ import PropertyToggle from './property-toggle';
 import PropertyCheckbox from './property-checkbox';
 import PropertyHidden from './property-hidden';
 import PropertyReadOnly from './property-read-only';
+import PropertyPrice from './property-price';
 
 export {
   PropertyColor,
@@ -17,7 +18,8 @@ export {
   PropertyToggle,
   PropertyCheckbox,
   PropertyHidden,
-  PropertyReadOnly
+  PropertyReadOnly,
+  PropertyPrice
 };
 
 export default {
@@ -29,5 +31,6 @@ export default {
   PropertyToggle,
   PropertyCheckbox,
   PropertyHidden,
-  PropertyReadOnly
+  PropertyReadOnly,
+  PropertyPrice
 };

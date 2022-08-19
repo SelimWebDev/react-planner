@@ -90,7 +90,7 @@ function extractElementData(node) {
 
 export default function Viewer2D(
   { state, width, height },
-  { viewer2DActions, linesActions, holesActions, verticesActions, itemsActions, areaActions, projectActions, catalog }) {
+  { viewer2DActions, linesActions, holesActions, verticesActions, itemsActions, areaActions, projectActions, catalog, totalPriceActions }) {
 
 
   let { viewer2D, mode, scene } = state;

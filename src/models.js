@@ -296,6 +296,7 @@ export class HistoryStructure extends Record({
 }
 
 export class State extends Record({
+  totalPrice: 0,
   mode: MODE_IDLE,
   scene: new Scene(),
   sceneHistory: new HistoryStructure(),
@@ -314,7 +315,7 @@ export class State extends Record({
   clipboardProperties: new Map(),
   selectedElementsHistory: new List(),
   misc: new Map(),   //additional info
-  alterate: false
+  alterate: false,
 }, 'State') {
   constructor(json = {}) {
     super({

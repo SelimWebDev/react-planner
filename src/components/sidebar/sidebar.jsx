@@ -7,6 +7,7 @@ import PanelLayers from './panel-layers';
 import PanelGuides from './panel-guides';
 import PanelGroups from './panel-groups';
 import PanelLayerElements from './panel-layer-elements';
+import PanelTotalPrice from './panel-total-price';
 import * as SharedStyle from '../../shared-style';
 import If from '../../utils/react-if';
 
@@ -55,7 +56,8 @@ export default function Sidebar({ state, width, height, sidebarComponents }) {
     { index: 3, condition: true, dom: <PanelGroups mode={state.mode} groups={state.scene.groups} layers={state.scene.layers} /> },
     { index: 4, condition: !multiselected, dom: <PanelElementEditor state={state} /> },
     //{ index: 5, condition: multiselected, dom: <PanelMultiElementsEditor state={state} /> },
-    { index: 6, condition: !!selectedGroup, dom: <PanelGroupEditor state={state} groupID={selectedGroup ? selectedGroup[0] : null} /> }
+    { index: 6, condition: !!selectedGroup, dom: <PanelGroupEditor state={state} groupID={selectedGroup ? selectedGroup[0] : null} /> },
+    { index: 7, condition: true, dom: <PanelTotalPrice state={state}/> }
   ];
 
   sorter = sorter.concat(sidebarComponents.map((Component, key) => {

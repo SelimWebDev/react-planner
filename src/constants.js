@@ -1,3 +1,6 @@
+// ACTIONS totalPrice
+export const UPDATE_TOTAL_PRICE = 'UPDATE_TOTAL_PRICE'
+
 // ACTIONS project
 export const NEW_PROJECT = 'NEW_PROJECT';
 export const LOAD_PROJECT = 'LOAD_PROJECT';
@@ -106,6 +109,10 @@ export const SELECT_LAYER = 'SELECT_LAYER';
 export const REMOVE_LAYER = 'REMOVE_LAYER';
 
 //GROUPING ACTIONS
+export const TOTAL_PRICE_ACTION = {
+  UPDATE_TOTAL_PRICE
+}
+
 export const PROJECT_ACTIONS = {
   NEW_PROJECT,
   LOAD_PROJECT,

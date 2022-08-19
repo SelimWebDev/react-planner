@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { FormNumberInput, FormTextInput } from '../../../style/export';
-import { PropertyLengthMeasure } from '../../../../catalog/properties/export';
+import { PropertyLengthMeasure, PropertyPrice } from '../../../../catalog/properties/export';
 
 const tableStyle = { width: '100%' };
 const firstTdStyle = { width: '6em' };
@@ -13,6 +13,8 @@ export default function LineAttributesEditor({element, onUpdate, attributeFormDa
   let vertexOne = attributeFormData.has('vertexOne') ? attributeFormData.get('vertexOne') : null;
   let vertexTwo = attributeFormData.has('vertexTwo') ? attributeFormData.get('vertexTwo') : null;
   let lineLength = attributeFormData.has('lineLength') ? attributeFormData.get('lineLength') : null;
+
+  const unitLinePrice = 50
 
   return (
     <div>
@@ -86,6 +88,12 @@ export default function LineAttributesEditor({element, onUpdate, attributeFormDa
         value={ lineLength }
         onUpdate={mapped => onUpdate('lineLength', mapped)}
         configs={{label: translator.t('Length'), min: 0, max: Infinity, precision: 2}}
+        state={state}
+      />
+      <PropertyPrice 
+        value={unitLinePrice}
+        onUpdate={mapped => onUpdate('price', mapped)}
+        configs={{label: 'price', length: lineLength}}
         state={state}
       />
     </div>

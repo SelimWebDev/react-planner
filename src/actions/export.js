@@ -8,6 +8,7 @@ import * as verticesActions from './vertices-actions';
 import * as itemsActions from './items-actions';
 import * as areaActions from './area-actions';
 import * as groupsActions from './groups-actions';
+import * as totalPriceActions from './total-price-action'
 
 export {
   projectActions,
@@ -19,7 +20,8 @@ export {
   verticesActions,
   itemsActions,
   areaActions,
-  groupsActions
+  groupsActions,
+  totalPriceActions
 };
 
 export default {
@@ -32,5 +34,6 @@ export default {
   verticesActions,
   itemsActions,
   areaActions,
-  groupsActions
+  groupsActions,
+  totalPriceActions
 };

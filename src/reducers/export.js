@@ -8,6 +8,7 @@ import ReactPlannerSceneReducer from './scene-reducer';
 import ReactPlannerVerticesReducer from './vertices-reducer';
 import ReactPlannerViewer2dReducer from './viewer2d-reducer';
 import ReactPlannerViewer3dReducer from './viewer3d-reducer';
+import TotalPriceReducer from './total-price-reducer';
 
 export {
   ReactPlannerAreasReducer,
@@ -19,7 +20,8 @@ export {
   ReactPlannerSceneReducer,
   ReactPlannerVerticesReducer,
   ReactPlannerViewer2dReducer,
-  ReactPlannerViewer3dReducer
+  ReactPlannerViewer3dReducer,
+  TotalPriceReducer
 };
 
 export default {
@@ -32,5 +34,6 @@ export default {
   ReactPlannerSceneReducer,
   ReactPlannerVerticesReducer,
   ReactPlannerViewer2dReducer,
-  ReactPlannerViewer3dReducer
+  ReactPlannerViewer3dReducer,
+  TotalPriceReducer
 }
