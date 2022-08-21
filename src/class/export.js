@@ -6,6 +6,7 @@ import Hole from './hole';
 import Vertex from './vertex';
 import Area from './area';
 import Item from './item';
+import TotalPrice from './totalPrice'
 import { HorizontalGuide, VerticalGuide } from './guide';
 
 export {
@@ -18,7 +19,8 @@ export {
   Area,
   Item,
   HorizontalGuide,
-  VerticalGuide
+  VerticalGuide,
+  TotalPrice
 };
 
 export default {
@@ -31,5 +33,6 @@ export default {
   Area,
   Item,
   HorizontalGuide,
-  VerticalGuide
+  VerticalGuide,
+  TotalPrice
 };

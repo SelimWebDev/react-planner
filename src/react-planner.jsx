@@ -55,6 +55,17 @@ class ReactPlanner extends Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    
+    let {state, totalPriceActions} = this.props;
+
+    //si un nouvel élément est ajouté sur la map
+    // => si un nouvel élément est ajouté à layers ?
+    if (state.get('react-planner').scene.layers !== prevProps.state.get('react-planner').scene.layers) {
+      totalPriceActions.updateTotalPrice()
+    }
+  }
+
   render() {
     let {width, height, state, stateExtractor, ...props} = this.props;
 

@@ -1,3 +1,7 @@
+//PRICE element
+export const LINE_PRICE = 30;
+export const HOLE_PRICE = 10;
+
 // ACTIONS totalPrice
 export const UPDATE_TOTAL_PRICE = 'UPDATE_TOTAL_PRICE'
 

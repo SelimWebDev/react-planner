@@ -7,7 +7,7 @@ import PanelLayers from './panel-layers';
 import PanelGuides from './panel-guides';
 import PanelGroups from './panel-groups';
 import PanelLayerElements from './panel-layer-elements';
-import PanelTotalPrice from './panel-total-price';
+import {PanelTotalPrice} from './panel-total-price';
 import * as SharedStyle from '../../shared-style';
 import If from '../../utils/react-if';
 
